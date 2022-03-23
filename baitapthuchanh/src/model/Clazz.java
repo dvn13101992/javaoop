@@ -1,10 +1,11 @@
 package model;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Clazz {
+public class Clazz implements Serializable{
 	private String className;
-	private String classId;
+	private int classId;
 
 	private Course course;
 	private Teacher teacher;
@@ -18,11 +19,11 @@ public class Clazz {
 		this.className = className;
 	}
 
-	public String getClassId() {
+	public int getClassId() {
 		return classId;
 	}
 
-	public void setClassId(String classId) {
+	public void setClassId(int classId) {
 		this.classId = classId;
 	}
 

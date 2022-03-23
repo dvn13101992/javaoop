@@ -27,6 +27,7 @@ public class CourseServiceImpl implements CourseService {
 	public void info(Course course) {
 		System.out.println("Course id: " + course.getId());
 		System.out.println("Cource name: " + course.getName());
+		System.out.println("---------------");
 
 	}
 
