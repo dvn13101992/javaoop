@@ -11,7 +11,7 @@ insert into course(id,name) values (1, 'java core'), (2, 'SQL');
 insert into course(id,name) values (3, 'servlet');
 delete from course where id = 3 ; 
 
-update course set name = 'srping boot' where id = 3;
+update course set name = 'srping boot' where id = 3person;
 
 select * from person order by age asc, name desc;
 select name, age from person;
@@ -43,6 +43,7 @@ select sl, nam_sinh from(
 select * from person where age in(23,30,26);
 
 select * from person where age = (select max(age) from person);
+
 
 
 
