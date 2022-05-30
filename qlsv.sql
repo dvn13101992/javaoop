@@ -6,6 +6,22 @@ create table course(
 	name varchar(100)
 );
 
+select * from class;
+
+
+select * from class_student;
+delete from class_student;
+
+delete from class;
+
+select p.id, name, age, birth_date, tc.deparment from person p 
+				 inner join teacher tc on p.id = tc.person_id ;
+                 
+ select * from person;       
+ 
+
+ SET SQL_SAFE_UPDATES = 0;
+
 select * from course; # this is comment
 insert into course(id,name) values (1, 'java core'), (2, 'SQL');
 insert into course(id,name) values (3, 'servlet');
@@ -17,6 +33,8 @@ select * from person order by age asc, name desc;
 select name, age from person;
 
 select * from person where age = 30;
+
+select * from teacher;
 
 select * from person where name like '%Ph%';
 select * from person where name like 'Ph%';
@@ -43,6 +61,23 @@ select sl, nam_sinh from(
 select * from person where age in(23,30,26);
 
 select * from person where age = (select max(age) from person);
+
+delete from person;
+
+delete from student;
+
+select * from student;
+
+select * from course;
+
+delete from student where person_id = 1;
+
+
+select * from person;
+
+select * from student a 
+inner join class_student b on a.person_id = b.student_id
+inner join class c on c.id = b.class_id;
 
 
 
